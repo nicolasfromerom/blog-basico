@@ -14,8 +14,9 @@ class PageController extends Controller
         ]);
     }
 
-    public function post(Post $post)
+    public function post($slug)
     {
+        $post = Post::where('slug',$slug)->get()->first();
         return view('post',[
             'post'=>$post
         ]);

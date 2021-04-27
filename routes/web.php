@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PageController@posts');
-Route::get('blog/{post}', 'PageController@post')->name('post');
+Route::get('blog/{slug}', 'PageController@post')->name('post');
 
 Auth::routes();
 
